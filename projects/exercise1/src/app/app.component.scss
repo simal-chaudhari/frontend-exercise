@@ -1,0 +1,88 @@
+$color_1: white;
+$color_2: #f44336;
+$font-family_1: Arial, Helvetica, sans-serif;
+$background-color_1: #04AA6D;
+$background-color_2: #f44336;
+
+/* Change styles for span and cancel button on extra small screens */
+body {
+	font-family: $font-family_1;
+}
+form {
+	width: 100%;
+  padding: 12px 20px;
+  border: 3px solid $background-color_1;
+}
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+input[type=number] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+button {
+	background-color: $background-color_1;
+	color: $color_1;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	&:hover {
+		opacity: 0.8;
+	}
+}
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: $background-color_2;
+}
+
+.container {
+	padding: 16px;
+}
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+.invalid-feedback {
+	color: $color_2;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  margin-top:50px;
+}
+
+.btn-primary, .btn-secondary{
+  width: 40%;
+}
+
+.btn-primary{
+  margin-right: 10px; 
+}
+
+.btn-secondary{
+  float: right;
+}
+
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}

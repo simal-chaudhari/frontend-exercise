@@ -1,0 +1,42 @@
+<!-- main app container -->
+<div class="card m-3 center">
+    <h5 class="card-header">
+        <h1>Exercise 1</h1>
+    </h5>
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+
+                <div class="form-group col-5">
+                    <label>Product Name<span class="invalid-feedback">*</span></label>
+                    <input type="text" formControlName="product_name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f['product_name'].errors }" />
+                    <div *ngIf="submitted && f['product_name'].errors" class="invalid-feedback">
+                        <div *ngIf="f['product_name'].errors?.['required']">Product Name is required</div>
+                        <div *ngIf="f['product_name'].errors?.['minlength']">Product Name must be greate or euqal 5
+                            characters</div>
+                        <div *ngIf="f['product_name'].errors?.['maxlength']">Product Name must be less or eqal 20
+                            characters</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-5">
+                    <label>Price<span class="invalid-feedback">*</span></label>
+                    <input type="text" formControlName="price" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f['price'].errors }" />
+                    <div *ngIf="submitted && f['price'].errors" class="invalid-feedback">
+                        <div *ngIf="f['price'].errors?.['required']">Price is required</div>
+                        <div *ngIf="f['price'].errors?.['pattern']">Number Only</div>
+                        <div *ngIf="f['price'].errors?.['min']">Price must be greate or euqal 5</div>
+                        <div *ngIf="f['price'].errors?.['max']">Price must be less or eqal 20</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary mr-1">Submit</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Reset</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+$color_1: white;
+$font-family_1: Arial, Helvetica, sans-serif;
+$background-color_1: #f1f1f1;
+
+/* Style the header */
+/* Container for flexboxes */
+/* Create three equal columns that sits next to each other */
+/* Style the footer */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: $font-family_1;
+}
+.header {
+	background-color: $background-color_1;
+	padding: 30px;
+	font-size: 35px;
+}
+.row {
+	display: -webkit-flex;
+	display: flex;
+}
+.column {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding: 10px;
+	height: 300px;
+}
+.footer {
+	background-color: $background-color_1;
+	padding: 10px;
+	text-align: center;
+}
+span.number_display {
+	background: #3b2222;
+	padding: 22px;
+	border-radius: 11px;
+	color: $color_1;
+}
+@media (max-width: 600px) {
+	.row {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+}

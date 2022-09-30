@@ -1,0 +1,24 @@
+$color_1: white;
+$background-color_1: #333;
+$background-color_2: #111;
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: $background-color_1;
+}
+li {
+	float: left;
+	a {
+		display: block;
+		color: $color_1;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		&:hover {
+			background-color: $background-color_2;
+		}
+	}
+}
